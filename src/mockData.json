@@ -1,0 +1,284 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Charles",
+        "last": "Graves"
+      },
+      "location": {
+        "street": {
+          "number": 6538,
+          "name": "Windsor Road"
+        },
+        "city": "Ripon",
+        "state": "Grampian",
+        "country": "United Kingdom",
+        "postcode": "NM79 6RF",
+        "coordinates": {
+          "latitude": "49.0267",
+          "longitude": "-78.6731"
+        },
+        "timezone": {
+          "offset": "+4:30",
+          "description": "Kabul"
+        }
+      },
+      "email": "charles.graves@example.com",
+      "login": {
+        "uuid": "25aafb61-628e-42c5-adb8-2562e4d828ce",
+        "username": "sadleopard220",
+        "password": "song",
+        "salt": "AlF6jXwA",
+        "md5": "c16689fda3d7099ac495aee1e5336e92",
+        "sha1": "484a3842de812b37ab9cdb592106b3b3d811182b",
+        "sha256": "1b7a541d8c38027ebeda6a08508c2e7ec1053a362d5220f6f027fa422da8f296"
+      },
+      "dob": {
+        "date": "1964-02-07T18:31:50.620Z",
+        "age": 56
+      },
+      "registered": {
+        "date": "2009-01-02T12:53:00.318Z",
+        "age": 11
+      },
+      "phone": "016974 66262",
+      "cell": "0715-807-328",
+      "id": {
+        "name": "NINO",
+        "value": "AS 89 52 84 X"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/16.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/16.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/16.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Neil",
+        "last": "Mckinney"
+      },
+      "location": {
+        "street": {
+          "number": 8260,
+          "name": "Park Lane"
+        },
+        "city": "Birmingham",
+        "state": "Humberside",
+        "country": "United Kingdom",
+        "postcode": "A8L 0XT",
+        "coordinates": {
+          "latitude": "-32.2005",
+          "longitude": "8.5740"
+        },
+        "timezone": {
+          "offset": "-9:00",
+          "description": "Alaska"
+        }
+      },
+      "email": "neil.mckinney@example.com",
+      "login": {
+        "uuid": "b69af016-4322-4235-84fc-248de59b8677",
+        "username": "purpleswan407",
+        "password": "sunfire",
+        "salt": "AjEe32XI",
+        "md5": "9d7a1086e5d3d826880361f0f515e795",
+        "sha1": "930a16e92e34df0d9bc3399c9dc720a5f2d97076",
+        "sha256": "d27f0f32e52a155e800113395efaf4a71dd93f7e9d0806a7db054a03aca5f1de"
+      },
+      "dob": {
+        "date": "1972-05-17T22:42:21.878Z",
+        "age": 48
+      },
+      "registered": {
+        "date": "2008-06-19T19:49:27.977Z",
+        "age": 12
+      },
+      "phone": "025 8166 9670",
+      "cell": "0736-092-617",
+      "id": {
+        "name": "NINO",
+        "value": "YK 95 59 95 K"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/89.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/89.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/89.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Anthony",
+        "last": "Castro"
+      },
+      "location": {
+        "street": {
+          "number": 106,
+          "name": "Main Street"
+        },
+        "city": "Wolverhampton",
+        "state": "Norfolk",
+        "country": "United Kingdom",
+        "postcode": "B15 5BQ",
+        "coordinates": {
+          "latitude": "-44.8094",
+          "longitude": "121.3824"
+        },
+        "timezone": {
+          "offset": "-3:00",
+          "description": "Brazil, Buenos Aires, Georgetown"
+        }
+      },
+      "email": "anthony.castro@example.com",
+      "login": {
+        "uuid": "01d44ba3-1bb8-4a9a-893e-c994a93947fd",
+        "username": "purplegoose695",
+        "password": "horney",
+        "salt": "nL4RHzBT",
+        "md5": "b8fd063d88453adc3c53937521f0b18c",
+        "sha1": "922134b11392f32719dd4593e90ba46af738747e",
+        "sha256": "875f5b43fafc2138affe6567c86a85f25485e314e95c10eb61c914f93079eba4"
+      },
+      "dob": {
+        "date": "1980-06-04T02:11:13.750Z",
+        "age": 40
+      },
+      "registered": {
+        "date": "2015-12-06T00:01:36.325Z",
+        "age": 5
+      },
+      "phone": "015395 65344",
+      "cell": "0795-267-858",
+      "id": {
+        "name": "NINO",
+        "value": "RX 71 00 09 N"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/6.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/6.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/6.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Anthony",
+        "last": "Chavez"
+      },
+      "location": {
+        "street": {
+          "number": 2859,
+          "name": "Albert Road"
+        },
+        "city": "Cardiff",
+        "state": "Strathclyde",
+        "country": "United Kingdom",
+        "postcode": "F2 7HF",
+        "coordinates": {
+          "latitude": "-18.7624",
+          "longitude": "-170.9157"
+        },
+        "timezone": {
+          "offset": "+4:00",
+          "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+        }
+      },
+      "email": "anthony.chavez@example.com",
+      "login": {
+        "uuid": "238169a1-04a0-4dc0-b239-f31580dd5a68",
+        "username": "lazyfish910",
+        "password": "megane",
+        "salt": "UIoL9Jyt",
+        "md5": "9b0519538bb34e45d52274b470f51da6",
+        "sha1": "ff0ee785585928c552a4c45cec5dc13651a625a2",
+        "sha256": "d219ccaa5b3a89fe656f0bac3a303960e6f6852d6a5592f117314427d0655c45"
+      },
+      "dob": {
+        "date": "1996-07-29T22:12:05.552Z",
+        "age": 24
+      },
+      "registered": {
+        "date": "2011-06-23T20:04:17.728Z",
+        "age": 9
+      },
+      "phone": "026 7812 4569",
+      "cell": "0744-616-369",
+      "id": {
+        "name": "NINO",
+        "value": "CW 47 66 18 Z"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/54.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/54.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/54.jpg"
+      },
+      "nat": "GB"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Rick",
+        "last": "Gray"
+      },
+      "location": {
+        "street": {
+          "number": 2145,
+          "name": "School Lane"
+        },
+        "city": "Edinburgh",
+        "state": "South Yorkshire",
+        "country": "United Kingdom",
+        "postcode": "ST8 9FD",
+        "coordinates": {
+          "latitude": "45.2216",
+          "longitude": "-155.7344"
+        },
+        "timezone": {
+          "offset": "-10:00",
+          "description": "Hawaii"
+        }
+      },
+      "email": "rick.gray@example.com",
+      "login": {
+        "uuid": "938d1c54-e2ef-484a-9009-66854b087cfb",
+        "username": "happybird502",
+        "password": "1994",
+        "salt": "eP9Aofsn",
+        "md5": "92895d5e6788ab43f8b7aad52ec12cfa",
+        "sha1": "ce20fdd03a6be09032f9a65925a22ac0e0c7f26c",
+        "sha256": "03f1229163f586278281632beff5bd6a7f5696f61f6310185a39038096ffa201"
+      },
+      "dob": {
+        "date": "1991-08-18T14:17:44.166Z",
+        "age": 29
+      },
+      "registered": {
+        "date": "2017-01-29T22:52:39.615Z",
+        "age": 3
+      },
+      "phone": "015396 96999",
+      "cell": "0771-828-068",
+      "id": {
+        "name": "NINO",
+        "value": "LJ 08 44 14 G"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/93.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/93.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/93.jpg"
+      },
+      "nat": "GB"
+    }
+  ]
+}
