@@ -20,7 +20,12 @@ class EmployeeTable extends Component {
             {Data.results.map((employee) => {
               return (
                 <tr>
-                  <td>{`${employee.picture.thumbnail}`}</td>
+                  <td>
+                    <img
+                      alt={`${employee.name.first} ${employee.name.last}`}
+                      src={`${employee.picture.thumbnail}`}
+                    />
+                  </td>
                   <td>{`${employee.name.first} ${employee.name.last}`}</td>
                   <td>{`${employee.phone}`}</td>
                   <td>{`${employee.email}`}</td>
