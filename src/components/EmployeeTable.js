@@ -9,64 +9,60 @@ class EmployeeTable extends Component {
     super(props);
 
     this.state = {
-      imageUrl: "",
-      name: "",
-      phone: "",
-      email: "",
-      dob: "",
+      users: [],
       loading: true,
+      error: "",
     };
   }
 
-  componentDidMount() {
-    console.log("component did mount");
-    this.renderEmployees();
-  }
-
-  async renderEmployees() {
-    const { data } = await axios.get(
-      "https://randomuser.me/api/?results=100&nat=gb"
-    );
-    console.log(data);
-    if (data.results) {
-      this.setState = {
-        imageUrl: "",
-        name: "",
-        phone: "",
-        email: "",
-        dob: "",
-      };
+  async componentDidMount() {
+    try {
+      const { data } = await axios.get(
+        "https://randomuser.me/api/?results=100&nat=gb"
+      );
+      this.setState({ users: data.results, loading: false });
+    } catch (err) {
+      this.setState({ error: "Server error", loading: false });
     }
   }
 
   render() {
-    return (
-      <div>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>Image</th>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>DOB</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Data.results.map((employee) => {
-              const employeeInfo = {
-                imageURL: `${employee.picture.thumbnail}`,
-                name: `${employee.name.first} ${employee.name.last}`,
-                phone: `${employee.phone}`,
-                email: `${employee.email}`,
-                dob: `${employee.dob.date}`,
-              };
-              return <TableRow info={employeeInfo} />;
-            })}
-          </tbody>
-        </Table>
-      </div>
-    );
+    const { users, loading, error } = this.state;
+    if (loading) {
+      return <div>Loading ...</div>;
+    }
+    if (error) {
+      return <div>{error}</div>;
+    }
+    if (!loading) {
+      return (
+        <div>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>DOB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((employee) => {
+                const employeeInfo = {
+                  imageURL: `${employee.picture.thumbnail}`,
+                  name: `${employee.name.first} ${employee.name.last}`,
+                  phone: `${employee.phone}`,
+                  email: `${employee.email}`,
+                  dob: `${employee.dob.date}`,
+                };
+                return <TableRow info={employeeInfo} />;
+              })}
+            </tbody>
+          </Table>
+        </div>
+      );
+    }
   }
 }
 
