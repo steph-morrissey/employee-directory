@@ -1,18 +1,16 @@
-import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
+import React from "react";
 
-class SearchBar extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <Form className='py-3'>
-          <Form.Group controlId='searchFilter'>
-            <Form.Control type='search' placeholder='Search...' />
-          </Form.Group>
-        </Form>
-      </div>
-    );
-  }
-}
+const SearchBar = ({ onChange }) => {
+  return (
+    <div class='form-group mx-2'>
+      <input
+        onChange={onChange}
+        type='text'
+        class='form-control'
+        placeholder='Search Employee'
+      />
+    </div>
+  );
+};
 
 export default SearchBar;

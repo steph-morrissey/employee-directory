@@ -1,68 +1,84 @@
 import React, { Component } from "react";
-import Table from "react-bootstrap/Table";
-import Data from "../mockData.json";
 import axios from "axios";
-import TableRow from "./TableRow";
+import moment from "moment";
+
+import SearchBar from "./SearchBar";
+import TableContainer from "../containers/TableContainer";
+
+const API_URL = "https://randomuser.me/api/?results=10&nat=gb";
 
 class EmployeeTable extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      users: [],
+      employees: [],
+      employeesToRender: [],
       loading: true,
       error: "",
     };
   }
 
   async componentDidMount() {
-    try {
-      const { data } = await axios.get(
-        "https://randomuser.me/api/?results=100&nat=gb"
+    const { data } = await axios.get(API_URL);
+    const employees = data.results;
+
+    this.setState({
+      employees,
+      employeesToRender: employees,
+      loading: false,
+      error: "",
+    });
+  }
+
+  handleOnChange = (event) => {
+    const { employees } = this.state;
+    const filterBy = event.target.value;
+    const employeesToRender = employees.filter((employee) => {
+      const lastName = employee.name.last;
+      const firstName = employee.name.first;
+
+      return firstName.includes(filterBy) || lastName.includes(filterBy);
+    });
+
+    this.setState({
+      employeesToRender,
+    });
+  };
+
+  handleSortByDob = () => {
+    const { employeesToRender } = this.state;
+
+    const sortedEmployees = employeesToRender.sort((a, b) => {
+      return moment(a.dob.date).diff(b.dob.date);
+    });
+
+    this.setState({
+      employeesToRender: sortedEmployees,
+    });
+  };
+
+  renderTable() {
+    const { loading, error, employeesToRender } = this.state;
+
+    if (!loading && !error) {
+      return (
+        <TableContainer
+          rows={employeesToRender}
+          onSortByDob={this.handleSortByDob}
+        />
       );
-      this.setState({ users: data.results, loading: false });
-    } catch (err) {
-      this.setState({ error: "Server error", loading: false });
     }
+    return null;
   }
 
   render() {
-    const { users, loading, error } = this.state;
-    if (loading) {
-      return <div>Loading ...</div>;
-    }
-    if (error) {
-      return <div>{error}</div>;
-    }
-    if (!loading) {
-      return (
-        <div>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>DOB</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((employee) => {
-                const employeeInfo = {
-                  imageURL: `${employee.picture.thumbnail}`,
-                  name: `${employee.name.first} ${employee.name.last}`,
-                  phone: `${employee.phone}`,
-                  email: `${employee.email}`,
-                  dob: `${employee.dob.date}`,
-                };
-                return <TableRow info={employeeInfo} />;
-              })}
-            </tbody>
-          </Table>
-        </div>
-      );
-    }
+    return (
+      <div className='container'>
+        <SearchBar onChange={this.handleOnChange} />
+        {this.renderTable()}
+      </div>
+    );
   }
 }
 
